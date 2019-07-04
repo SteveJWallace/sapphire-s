@@ -1,0 +1,144 @@
+{
+    "name": "TwoTrees Sapphire S",
+    "version": 2,    
+    "inherits": "fdmprinter",
+    "metadata": {
+        "visible": true,
+        "author": "Steve Wallace",
+        "manufacturer": "TwoTrees",
+        "file_formats": "text/x-gcode",
+        "machine_extruder_trains": {
+            "0": "twotrees_sapphire_s_extruder_0"
+        },
+        "supports_usb_connection": false,
+        "has_machine_materials": true,
+        "platform": "sapphire platform.stl",
+        "has_variants": false,
+        "platform_offset": [
+            -100,
+            0,
+            100
+          ]
+    },
+    "overrides":
+    {
+        "machine_name":
+        {
+            "default_value": "TwoTrees Sapphire S"
+        },        
+        "machine_width":
+        {
+            "default_value": 200
+        },
+        "machine_depth":
+        {                    
+            "default_value": 200
+        },
+        "machine_height":
+        {
+            "default_value": 200                 
+        },       
+        "acceleration_enabled":
+        {
+            "default_value": false
+        },
+        "machine_max_acceleration_x":
+        {
+            "default_value": 1200
+        },
+        "machine_max_acceleration_y":
+        {
+            "default_value": 1200
+        },
+        "machine_max_acceleration_z":
+        {
+            "default_value": 20
+        },
+        "machine_max_acceleration_e":
+        {
+            "default_value": 800
+        },
+        "machine_acceleration": { "default_value": 1200 },
+        "acceleration_print": { "default_value": 1500 },
+        "acceleration_travel": {
+                    "default_value": 2000,
+                    "value": "acceleration_print if magic_spiralize else 2000"
+        },
+        "machine_max_feedrate_x":
+        {               
+            "default_value": 200
+        },
+        "machine_max_feedrate_y":
+        {
+            "default_value": 200
+        },
+        "machine_max_feedrate_z":
+        {
+            "default_value": 40
+        },
+        "machine_max_feedrate_e":
+        {
+            "default_value": 150
+        },
+        "jerk_enabled":
+        {
+            "default_value": false
+        },
+        "machine_max_jerk_xy":
+        {
+            "default_value": 20.0
+        },
+        "machine_max_jerk_z":
+        {
+            "default_value": 5.0
+        },
+        "machine_max_jerk_e":
+        {
+            "default_value": 10.0
+        },
+        "machine_steps_per_mm_x":
+        {
+            "default_value": 640                 
+        },
+        "machine_steps_per_mm_y":
+        {                    
+            "default_value": 640
+        },
+        "machine_steps_per_mm_z":
+        {
+            "default_value": 400
+        },
+        "machine_steps_per_mm_e":
+        {
+            "default_value": 400
+        },
+        "machine_show_variants":
+        {
+            "default_value": true
+        },
+        "machine_buildplate_type":
+        {
+            "default_value": "Aluminum"                 
+        },
+        "machine_start_gcode":
+        {
+            "default_value": "G28 ;Home\nG1 Z15.0 F6000 ;Move the platform down 15mm\n;Prime the extruder\nG92 E0\nG1 F200 E3\nG92 E0"
+        },
+        "machine_end_gcode":
+        {
+            "default_value": "M104 S0\nM140 S0\n;Retract the filament\nG92 E1\nG1 E-1 F300\nG28 X0 Y0\nM84"
+        },
+        "machine_heated_bed":
+        {
+            "default_value": true                 
+        },
+        "retraction_amount":
+        {
+            "default_value": 6.5
+        },
+        "retraction_speed":
+        {
+            "default_value": 75
+        }
+    }
+}
