@@ -12,7 +12,13 @@
         },
         "supports_usb_connection": false,
         "has_machine_materials": true,
-        "has_variants": false
+        "platform": "sapphire platform.stl",
+        "has_variants": false,
+        "platform_offset": [
+            -100,
+            0,
+            100
+          ]
     },
     "overrides":
     {
