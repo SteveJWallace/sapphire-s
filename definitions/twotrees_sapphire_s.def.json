@@ -40,7 +40,7 @@
         },       
         "acceleration_enabled":
         {
-            "default_value": true
+            "default_value": false
         },
         "machine_max_acceleration_x":
         {
@@ -82,7 +82,7 @@
         },
         "jerk_enabled":
         {
-            "default_value": true
+            "default_value": false
         },
         "machine_max_jerk_xy":
         {
